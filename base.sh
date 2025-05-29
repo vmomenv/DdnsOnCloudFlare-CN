@@ -43,7 +43,7 @@ checkConfValid() {
 getIpv4Address() {
   # try and choose one that works on your machine
   # curl -k -s "http://members.3322.org/dyndns/getip" | grep -E -o '([0-9]+\.){3}[0-9]+' | head -n1 | cut -d' ' -f1
-  curl -s https://api.ipify.org
+  curl -s -4 ip.sb
 }
 
 getIpv6Address() {
